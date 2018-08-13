@@ -12,6 +12,7 @@ import themes from './themes/themes';
 
 const theme = createMuiTheme(themes.default);
 
+
 const PrivateRoute = ({ component: Component, ...rest }: any) => (
 
   <Route {...rest} render={(props) => (

@@ -7,7 +7,6 @@ import createStyles from '@material-ui/core/styles/createStyles';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Theme } from '@material-ui/core/styles/createMuiTheme';
 
-
 const drawerWidth = 500;
 
 const styles = (theme: Theme) => createStyles({
@@ -21,7 +20,7 @@ const styles = (theme: Theme) => createStyles({
     display: 'flex',
     width: '100%',
     margin: '-8px',
-    
+    marginBottom: '-8px'
   },
   appBar: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -29,7 +28,6 @@ const styles = (theme: Theme) => createStyles({
   drawerPaper: {
     position: 'relative',
     width: drawerWidth,
-
   },
   
   toolbar: theme.mixins.toolbar,
@@ -37,9 +35,10 @@ const styles = (theme: Theme) => createStyles({
     flexGrow: 1,
     backgroundColor: '#BBDEFB',
     padding: theme.spacing.unit * 3,
-    backgroundImage:  `url(${"../../assets/img/landingPage.jpg"})`
-
-  },
+    backgroundImage:  `url(${'../../assets/img/landingPage.jpg'})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
+  }, 
 });
 
 class LandingPage extends React.Component<any, any> {

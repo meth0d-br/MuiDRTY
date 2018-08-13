@@ -22,15 +22,7 @@ module.exports = {
                 loader: 'ts-loader'
             },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-            {
-                test: /\.(jpg|png|gif|svg|pdf|ico)$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        limit: 100000
-                    },
-                }, ]
-            }
+            { test: /\.jpg$/, use: 'file-loader' }
         ]
     },
     plugins: [
