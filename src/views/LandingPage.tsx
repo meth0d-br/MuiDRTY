@@ -7,6 +7,7 @@ import createStyles from '@material-ui/core/styles/createStyles';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Theme } from '@material-ui/core/styles/createMuiTheme';
 
+
 const drawerWidth = 500;
 
 const styles = (theme: Theme) => createStyles({
@@ -36,7 +37,7 @@ const styles = (theme: Theme) => createStyles({
     flexGrow: 1,
     backgroundColor: '#BBDEFB',
     padding: theme.spacing.unit * 3,
-    backgroundImage:  `url(${"https://etraining-latest.badrabbit.com/assets/img/buerger.jpg"})`
+    backgroundImage:  `url(${"../../assets/img/landingPage.jpg"})`
 
   },
 });
@@ -76,7 +77,6 @@ class LandingPage extends React.Component<any, any> {
         <div className={classes.appFrame}>
           <main className={classes.content}>
             <div className={classes.toolbar} />
-            <Typography>{'You think water moves fast? You should see ice.'}</Typography>
           </main>
           {drawer}
         </div>

@@ -21,7 +21,16 @@ module.exports = {
                 test: /\.(ts|tsx)$/,
                 loader: 'ts-loader'
             },
-            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+            {
+                test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 100000
+                    },
+                }, ]
+            }
         ]
     },
     plugins: [
